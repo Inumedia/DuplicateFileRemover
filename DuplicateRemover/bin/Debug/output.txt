@@ -1,0 +1,2 @@
+Building tree...113223 files found
+Beginning hashing and iteratingProjected memory usage: 33514528 bytes (32729.03125 kb, 31.9619445800781 mb) +- a few kb.

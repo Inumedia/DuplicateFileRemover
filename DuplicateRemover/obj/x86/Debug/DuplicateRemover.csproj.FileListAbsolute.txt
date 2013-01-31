@@ -1,0 +1,10 @@
+D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\DuplicateRemover\DuplicateRemover\bin\Debug\DuplicateRemover.exe
+D:\Projects\DuplicateRemover\DuplicateRemover\bin\Debug\DuplicateRemover.pdb
+D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.exe
+D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.pdb
+D:\Projects\DuplicateRemover\DuplicateRemover\bin\Debug\Utilities.dll
+D:\Projects\DuplicateRemover\DuplicateRemover\bin\Debug\Utilities.pdb
+D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.Program.resources
+D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\GenerateResource.write.1.tlog
