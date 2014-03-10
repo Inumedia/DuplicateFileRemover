@@ -8,3 +8,12 @@ D:\Projects\DuplicateRemover\DuplicateRemover\bin\Debug\Utilities.pdb
 D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.Program.resources
 D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Projects\DuplicateRemover\DuplicateRemover\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.exe
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.pdb
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\bin\Debug\DuplicateRemover.exe
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\bin\Debug\DuplicateRemover.pdb
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\bin\Debug\Utilities.dll
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\bin\Debug\Utilities.pdb
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.csprojResolveAssemblyReference.cache
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.Program.resources
+C:\Users\Inumedia\Documents\GitHub\DuplicateFileRemover\DuplicateRemover\obj\x86\Debug\DuplicateRemover.csproj.GenerateResource.Cache

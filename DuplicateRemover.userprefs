@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DuplicateRemover\Program.cs">
+    <Files>
+      <File FileName="DuplicateRemover\Program.cs" Line="259" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/Program.cs" line="18" column="11" />
+      <Breakpoint file="/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/Program.cs" line="71" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

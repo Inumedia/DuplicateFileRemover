@@ -1,0 +1,7 @@
+/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
+/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/obj/x86/Debug/DuplicateRemover.Program.resources
+/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/bin/Debug/DuplicateRemover.exe.mdb
+/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/bin/Debug/DuplicateRemover.exe
+/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/obj/x86/Debug/DuplicateRemover.exe
+/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/obj/x86/Debug/DuplicateRemover.exe.mdb
+/media/inumedia/C6F8A032F8A02323/Users/Inumedia/Documents/GitHub/DuplicateFileRemover/DuplicateRemover/bin/Debug/Utilities.dll
