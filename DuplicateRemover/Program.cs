@@ -60,6 +60,7 @@ namespace DuplicateRemover
             Console.SetOut(consoleWriter);
         }*/
 
+		CheckBox verboseLogging;
 		Button selectFolder;
 		FolderBrowserDialog folderSelector;
         public string target;
@@ -91,7 +92,7 @@ namespace DuplicateRemover
             Debug.Write("Building tree...");
             subFiles = IterateFiles(target);
             //subFiles = Directory.GetFiles(Path.GetFullPath(target), "*.*", SearchOption.AllDirectories);
-            Debug.WriteLine("{0} files found", subFiles.Length);
+			Debug.WriteLine(" files found", subFiles.Length);
 			Debug.WriteLine("Beginning hashing and iterating");
             hashFile = new Dictionary<string, string>();
 			//int projectedMemoryUsage = (subFiles.Length * (40 + 256)) + (32 * 16) + 8;
@@ -138,21 +139,16 @@ namespace DuplicateRemover
 
                 totalWatch.Restart();
                 string file = subFiles[hashed];
-                //Console.CursorTop = Console.WindowHeight - 2;
-                //Console.CursorLeft = 0;
-                //string safeFile = string.Format("Processing: {0}", file);
-                //safeFile = safeFile.Length > Console.WindowWidth - 2 ? safeFile.Substring(0, Console.WindowWidth - 2) : safeFile;
-                //Debug.WriteLine(safeFile);
-                //Console.CursorTop = Console.WindowHeight - 2;
+				if (verboseLogging.Checked)
+					Debug.WriteLine (string.Format("Processing: {0}", file));
                 if (i == 32)
                     i = 0;
                 watch.Start();
                 string hash = HashFile(file);
+				Debug.WriteLine (string.Format("Hash: {0}", hash));
                 watch.Stop();
                 if (hash == null)
-                {
-                    //Console.CursorLeft = 0;
-                    //Debug.Write("Error     :");
+				{
                     continue;
                 }
                 hashTimes[i] = watch.ElapsedMilliseconds;
@@ -163,9 +159,6 @@ namespace DuplicateRemover
                 {
                     if (j == 32)
                         j = 0;
-                    //Console.CursorLeft = 0;
-                    //Console.CursorTop = Console.WindowHeight - 2;
-                    //Debug.Write("Removing  :");
                     watch.Restart();
                     RemoveDuplicate(file);
                     watch.Stop();
@@ -175,15 +168,13 @@ namespace DuplicateRemover
                 totalWatch.Stop();
                 totalTimes[i] = totalWatch.ElapsedMilliseconds;
 
-                //double avgHash = ComputeAverage(hashTimes, k),
-                //       avgRemove = ComputeAverage(removeTimes, removed),
-                //       avgTotal = ComputeAverage(totalTimes, k);
-                //Console.CursorTop = Console.WindowHeight - 1;
-                //Console.CursorLeft = 0;
-                //string avg = string.Format("Avg ms: Hash={0}, Remove={1}, Total={2} Removed={3} Processed={4}/{5}", avgHash, avgRemove, avgTotal, removed, hashed, c);
-                //if (avg.Length < Console.WindowWidth)
-                //    avg = string.Join("", avg, new String(' ', Console.WindowWidth - avg.Length));
-                //Debug.Write(avg);
+				if (verboseLogging.Checked) {
+					double avgHash = ComputeAverage(hashTimes.values, i),
+						avgRemove = ComputeAverage(removeTimes.values, removed),
+						avgTotal = ComputeAverage(totalTimes.values, i);
+					string avg = string.Format("Avg ms: Hash={0}, Remove={1}, Total={2} Removed={3} Processed={4}/{5}", avgHash, avgRemove, avgTotal, removed, hashed, c);
+					Debug.WriteLine (avg);
+				}
             }
         }
 
@@ -191,7 +182,7 @@ namespace DuplicateRemover
         {
             try
             {
-				Debug.WriteLine("Removing {0}", fileName);
+				Debug.WriteLine(string.Format("Removing {0}", fileName));
                 File.Delete(fileName);
             }
             catch (Exception)
@@ -202,11 +193,11 @@ namespace DuplicateRemover
             }
         }
 
-        public double ComputeAverage(long[] times, int count)
+		public double ComputeAverage(double[] times, int count)
         {
             if (count == 0) return Double.NaN;
             int cap = Math.Min(times.Length, count);
-            long totalTimes = 0;
+			double totalTimes = 0;
             for (int i = 0; i < cap; ++i)
                 totalTimes += times[i];
             return totalTimes / (double)cap;
@@ -232,7 +223,7 @@ namespace DuplicateRemover
 
 		void SelectFolderStartProcess(object sender, EventArgs e){
 			if (folderSelector.ShowDialog () == DialogResult.OK) {
-				Debug.WriteLine ("Using directory {0}", folderSelector.SelectedPath);
+				Debug.WriteLine (string.Format("Using directory {0}", folderSelector.SelectedPath));
 				SetTarget(folderSelector.SelectedPath);
 				new Thread (new ThreadStart (Run)).Start ();
 			}
@@ -247,6 +238,7 @@ namespace DuplicateRemover
             this.ClientSize = new Size(698, 512);
 			this.Name = this.Text = "Duplicate Remover";
 
+			verboseLogging = new CheckBox ();
 			selectFolder = new Button ();
 			selectFolder.Click += SelectFolderStartProcess;
 			selectFolder.Text = "Select Folder";
@@ -255,8 +247,12 @@ namespace DuplicateRemover
 			this.Controls.Add (selectFolder);
 			selectFolder.Size = selectFolder.PreferredSize;
 
+			verboseLogging.Location = new Point (selectFolder.Right + 5, 5);
+			verboseLogging.Text = "Verbose logging";
+			verboseLogging.ClientSize = verboseLogging.PreferredSize;
 			hashTimes.Location = new Point (5, selectFolder.Bottom + 5);
 			this.Controls.Add(hashTimes);
+			this.Controls.Add (verboseLogging);
 
             this.ResumeLayout(false);
 
