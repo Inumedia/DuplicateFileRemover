@@ -18,6 +18,8 @@ namespace DuplicateRemover
 			//Debug.WriteLine("Enter the location we want to process: (ex: C:)");
             string target = null;
             bool exists = false;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             using (Program prog = new Program())
             {
 				//Seems mono doesn't like Console.ReadLine when working in debugging mode?
